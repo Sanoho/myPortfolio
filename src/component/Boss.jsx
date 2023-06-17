@@ -74,7 +74,7 @@ function Boss() {
         submissions.
       </Desc>
       <ButtonContainer>
-        <Button onClick={() => handleClick()}>Demo</Button>
+        {/* <Button onClick={() => hanxdleClick()}>Demo</Button> */}
         <Button
           onClick={() =>
             handleClick("https://github.com/DirtyKeyboard/phase-1-project")

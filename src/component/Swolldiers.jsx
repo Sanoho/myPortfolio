@@ -74,7 +74,7 @@ function Swolldiers() {
         and Semantic UI.
       </Desc>
       <ButtonContainer>
-        <Button onClick={() => handleClick()}>Demo</Button>
+        {/* <Button onClick={() => handleClick()}>Demo</Button> */}
         <Button
           onClick={() =>
             handleClick(
