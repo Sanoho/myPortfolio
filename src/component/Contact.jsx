@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import Map from "./Map";
 
@@ -27,7 +30,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 200;
+  font-weight: bold;
 `;
 
 const Form = styled.form`
@@ -81,17 +84,86 @@ const Copyright = styled.h5`
 `;
 
 const Contact = () => {
+  const ref = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_2ms8n5u",
+        "template_idpxtut",
+        ref.current,
+        "EVD3vjfFo1e_k8qIt"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast(
+            "Your message has been sent.  I will get back with you soon =).",
+            {
+              autoClose: 3000,
+              position: "bottom-right",
+              theme: "dark",
+            }
+          );
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          toast(`Something went wrong!! Try again.`, {
+            hideProgressBar: false,
+            autoClose: 3000,
+            type: "error",
+            theme: "dark",
+          });
+        }
+      );
+  };
+
   return (
     <Section>
       <Container id="contact">
         <Left>
-          <Form>
+          <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Me</Title>
-            <Input placeholder="Name" />
-            <Input placeholder="Email" />
-            <TextArea placeholder="Write your message" rows={10} />
-            <Button>Send</Button>
+            <Input
+              placeholder="Name"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+            />
+            <Input
+              placeholder="Email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+            />
+            <TextArea
+              placeholder="Write your message"
+              name="message"
+              value={form.message}
+              rows={10}
+              onChange={handleChange}
+            />
+            <Button type="submit">Send</Button>
           </Form>
+          <ToastContainer />
         </Left>
         <Right>
           <Map />

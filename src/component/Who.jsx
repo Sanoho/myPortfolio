@@ -84,6 +84,11 @@ const Button = styled.button`
   font-weight: 500;
   padding: 10px;
   width: 120px;
+  transition: 1s;
+
+  &:hover {
+    scale: 0.9;
+  }
 `;
 
 const handleClick = (url) => {

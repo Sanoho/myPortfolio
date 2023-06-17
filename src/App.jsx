@@ -5,7 +5,7 @@ import Who from "./component/Who";
 import Projects from "./component/Projects";
 
 const Container = styled.div`
-  background: url("./img/bg.jpeg");
+  background: url("./img/spacebg.jpeg");
   color: white;
   height: 100vh;
   overflow-y: auto;

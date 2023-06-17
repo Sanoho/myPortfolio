@@ -51,6 +51,11 @@ const ListItem = styled.li`
   color: grey;
   cursor: pointer;
 
+  &:hover {
+    color: white;
+    font-weight: bold;
+  }
+
   &:active {
     color: white;
   }
@@ -75,6 +80,11 @@ const Button = styled.button`
   cursor: pointer;
   padding: 10px;
   width: 100px;
+  transition: 1s;
+
+  &:hover {
+    scale: 0.9;
+  }
 `;
 
 function Navbar() {

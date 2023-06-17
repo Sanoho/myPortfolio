@@ -48,7 +48,7 @@ const ButtonContainer = styled.div`
   @media only screen and (max-width: 768px) {
     position: absolute;
     gap: 50px;
-    left: 70px;
+    left: 60px;
   }
 `;
 
