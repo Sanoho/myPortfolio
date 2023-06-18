@@ -18,6 +18,7 @@ const Container = styled.div`
   justify-content: space-between;
   scroll-snap-align: center;
   width: 1300px;
+  z-index: 1;
 `;
 
 const Left = styled.div`

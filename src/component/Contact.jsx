@@ -23,6 +23,7 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 
   @media only screen and (max-width: 768px) {
     justify-content: center;
@@ -70,6 +71,7 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
+  z-index: 1;
 
   @media only screen and (max-width: 768px) {
     display: none;

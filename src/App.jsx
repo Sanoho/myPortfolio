@@ -3,9 +3,10 @@ import Contact from "./component/Contact";
 import Home from "./component/Home";
 import Who from "./component/Who";
 import Projects from "./component/Projects";
+import StarCanvas from "./component/StarCanvas";
 
 const Container = styled.div`
-  background: url("./img/spacebg.jpeg");
+  background: url("./img/bg.jpeg");
   color: white;
   height: 100vh;
   overflow-y: auto;
@@ -20,6 +21,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
+      <StarCanvas />
       <Home />
       <Who />
       <Projects />
