@@ -114,10 +114,9 @@ const ButtonContainer = styled.div`
   bottom: 100px;
 
   @media only screen and (max-width: 768px) {
-    /* position: absolute;
+    position: absolute;
     gap: 50px;
-    left: 60px; */
-    justify-content: space-between;
+    left: 60px;
   }
 `;
 
