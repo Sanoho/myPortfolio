@@ -72,24 +72,53 @@ const Desc = styled.p`
 
 const ButtonContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   position: relative;
 `;
 
-const Button = styled.button`
-  background-color: #da4ea2;
-  border: none;
-  border-radius: 5px;
+// const Button = styled.button`
+//   background-color: transparent;
+//   border: solid #da4ea2;
+//   border-radius: 5px;
+//   color: white;
+//   cursor: pointer;
+//   font-weight: 500;
+//   padding: 10px;
+//   width: 120px;
+//   transition: 1s;
+
+//   &:hover {
+//     scale: 0.9;
+//   }
+// `;
+
+const Links = styled.a`
+  background-color: transparent;
   color: white;
   cursor: pointer;
   font-weight: 500;
   padding: 10px;
   width: 120px;
   transition: 1s;
+  text-align: center;
 
   &:hover {
     scale: 0.9;
   }
+`;
+
+const Icon = styled.img`
+  width: 35%;
+  border: #da4ea2 2px solid;
+  border-radius: 5px;
+`;
+
+const Icon1 = styled.img`
+  width: 35%;
+  border: #da4ea2 2px solid;
+  border-radius: 5px;
 `;
 
 const handleClick = (url) => {
@@ -128,23 +157,23 @@ const Who = () => {
             into your visionary concepts.
           </Desc>
           <ButtonContainer>
-            <Button
+            <Links
               onClick={() => {
-                document.getElementById("projects").scrollIntoView();
+                handleClick("https://www.linkedin.com/in/timothynhoang/");
               }}
             >
-              My Projects
-            </Button>
-            <Button>Achievements</Button>
-            <Button
-              onClick={() =>
-                handleClick(
-                  "https://docs.google.com/document/d/11ERrsGYwabMiTBQapsqkI6qARy0fX2j9tYBh7MdfFio/edit?usp=sharing"
-                )
-              }
+              <Icon src="./img/LinkedIn.png" alt="linkedIn icon" />
+            </Links>
+            <Links
+              onClick={() => {
+                handleClick("https://github.com/Sanoho");
+              }}
             >
-              Resume
-            </Button>
+              <Icon1 src="./img/github.png" alt="github icon" />
+            </Links>
+            <Links onClick={() => handleClick("https://medium.com/@sanohoang")}>
+              <Icon1 src="./img/medium.png" alt="medium icon" />
+            </Links>
           </ButtonContainer>
         </Right>
       </Container>

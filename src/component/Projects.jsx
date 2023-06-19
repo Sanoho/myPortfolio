@@ -56,10 +56,6 @@ const ListItem = styled.li`
   position: relative;
   -webkit-text-stroke: 1px white;
 
-  &:focus {
-    color: #da4ea2;
-  }
-
   @media only screen and (max-width: 768px) {
     font-size: 24px;
     color: white;
