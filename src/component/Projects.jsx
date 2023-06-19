@@ -4,7 +4,7 @@ import PokeFun from "./PokeFun";
 import PetAdopter from "./PetAdopter";
 import Hangman from "./Hangman";
 import Swolldiers from "./Swolldiers";
-import Boss from "./BOSS";
+import Boss from "./Boss";
 
 const data = ["PokéFun", "PetAdopter", "Hangman", "Swolldiers", "BOSS"];
 
