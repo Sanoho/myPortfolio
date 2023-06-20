@@ -22,8 +22,8 @@ const Desc = styled.div`
     left: 0;
     right: 0;
     margin: auto;
-    width: 200px;
-    height: 75px;
+    width: 280px;
+    height: 105px;
   }
 `;
 
@@ -32,6 +32,10 @@ const Techs = styled.div`
   font-size: 10px;
   gap: 5px;
   margin-top: 10px;
+
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const Tech1 = styled.p`
@@ -153,7 +157,12 @@ function PetAdopter() {
         <OrbitControls enableZoom={false} autoRotate />
       </Canvas>
       <Desc>
-        A full-stack app with a React frontend and Python/Flask backend.
+        An app that connects pet owners with available animals in different
+        shelters and promotes feedback to inspire others during their pet
+        adoption process.
+        {/* It actively promotes the
+        exchange of shelter experiences among users to assist and inspire others
+        during their pet adoption process. */}
         <Techs>
           <Tech1>React</Tech1>
           <Tech2>Python</Tech2>

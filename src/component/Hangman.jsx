@@ -22,9 +22,9 @@ const Desc = styled.div`
     left: 0;
     right: 0;
     margin: auto;
-    width: 160px;
-    height: 170px;
-    background-color: #00000056;
+    width: 260px;
+    height: 100px;
+    text-align: center;
   }
 `;
 
@@ -33,6 +33,10 @@ const Techs = styled.div`
   font-size: 10px;
   gap: 5px;
   margin-top: 10px;
+
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const Tech1 = styled.p`
