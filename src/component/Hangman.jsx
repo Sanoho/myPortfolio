@@ -12,7 +12,7 @@ const Desc = styled.div`
   border-radius: 10px;
   position: absolute;
   bottom: 130px;
-  left: 500px;
+  left: 40%;
   letter-spacing: 1.2px;
   color: white;
 
