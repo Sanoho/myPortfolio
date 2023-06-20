@@ -39,7 +39,6 @@ const Left = styled.div`
 
 // const Img = styled.img`
 //   width: 500px;
-//   border-radius: 110px;
 // `;
 
 const Right = styled.div`
@@ -74,7 +73,7 @@ const Line = styled.img`
 `;
 
 const Subtitle = styled.h2`
-  color: #da4ea2;
+  color: #e7ac46;
   font-size: 40px;
 `;
 
@@ -124,13 +123,13 @@ const Links = styled.a`
 
 const Icon = styled.img`
   width: 35%;
-  border: #da4ea2 2px solid;
+  border: #e7ac46 2px solid;
   border-radius: 5px;
 `;
 
 const Icon1 = styled.img`
   width: 35%;
-  border: #da4ea2 2px solid;
+  border: #e7ac46 2px solid;
   border-radius: 5px;
 `;
 

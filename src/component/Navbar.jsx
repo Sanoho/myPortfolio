@@ -72,7 +72,7 @@ const Icon = styled.img`
 `;
 
 const Button = styled.button`
-  background-color: #da4ea2;
+  background-color: #e7ac46;
   border: none;
   border-radius: 5px;
   color: white;

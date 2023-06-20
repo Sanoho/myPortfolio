@@ -133,7 +133,7 @@ const Button = styled.button`
 
   &:hover {
     scale: 1.2;
-    color: #da4ea2;
+    color: #e7ac46;
   }
 `;
 

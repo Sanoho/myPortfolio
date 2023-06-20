@@ -66,13 +66,19 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
-  background-color: #da4ea2;
+  /* background-color: #da4ea2; */
+  background-color: #e7ac46;
   color: white;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   padding: 20px;
+  transition: 1s;
+
+  &:hover {
+    scale: 1.05;
+  }
 `;
 
 const Right = styled.div`

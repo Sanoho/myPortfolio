@@ -89,7 +89,7 @@ const Map = () => {
           )}
         </Geographies>
         <Marker coordinates={[-94.346, 36.9828]}>
-          <circle r={6} fill="#da4ea2" />
+          <circle r={6} fill="#e7ac46" />
           <text fill="white" fontWeight="bold" textAnchor="start">
             Joplin
           </text>

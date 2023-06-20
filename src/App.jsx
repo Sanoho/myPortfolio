@@ -6,7 +6,8 @@ import Projects from "./component/Projects";
 import StarCanvas from "./component/StarCanvas";
 
 const Container = styled.div`
-  background: url("./img/bg.jpeg");
+  /* this is a pink color : #da4ea2 */
+  background: url("./img/bg2.jpeg");
   color: white;
   height: 100vh;
   overflow-y: auto;
