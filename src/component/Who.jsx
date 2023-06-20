@@ -37,6 +37,11 @@ const Left = styled.div`
   }
 `;
 
+// const Img = styled.img`
+//   width: 500px;
+//   border-radius: 110px;
+// `;
+
 const Right = styled.div`
   display: flex;
   flex: 1;
@@ -146,6 +151,7 @@ const Who = () => {
             <directionalLight position={[3, 2, 1]} />
             <Cube />
           </Canvas>
+          {/* <Img src="./img/heroPic.png" /> */}
         </Left>
         <Right>
           <Title>Aim for the Stars</Title>

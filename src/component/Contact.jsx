@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
@@ -91,81 +93,81 @@ const Copyright = styled.h5`
 
 const Contact = () => {
   const ref = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
+
+  const formSchema = yup.object().shape({
+    name: yup.string().required("Please enter a name"),
+    email: yup.string().email("Invalid email").required("required"),
+    message: yup.string().required("required"),
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_2ms8n5u",
-        "template_idpxtut",
-        ref.current,
-        "EVD3vjfFo1e_k8qIt"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          toast(
-            "Your message has been sent.  I will get back with you soon =).",
-            {
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    validationSchema: formSchema,
+    onSubmit: (values, helpers) => {
+      emailjs
+        .sendForm(
+          "service_2ms8n5u",
+          "template_idpxtut",
+          ref.current,
+          "EVD3vjfFo1e_k8qIt"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            toast(
+              "Your message has been sent.  I will get back with you soon =).",
+              {
+                autoClose: 3000,
+                position: "bottom-right",
+                theme: "dark",
+              }
+            );
+          },
+          (error) => {
+            console.log(error.text);
+            toast(`Something went wrong!! Try again.`, {
+              hideProgressBar: false,
               autoClose: 3000,
-              position: "bottom-right",
+              type: "error",
               theme: "dark",
-            }
-          );
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          toast(`Something went wrong!! Try again.`, {
-            hideProgressBar: false,
-            autoClose: 3000,
-            type: "error",
-            theme: "dark",
-          });
-        }
-      );
-  };
+            });
+          }
+        );
+      helpers.resetForm();
+    },
+  });
 
   return (
     <Section>
       <Container id="contact">
         <Left>
-          <Form ref={ref} onSubmit={handleSubmit}>
+          <Form ref={ref} onSubmit={formik.handleSubmit}>
             <Title>Contact Me</Title>
             <Input
               placeholder="Name"
               name="name"
-              value={form.name}
-              onChange={handleChange}
+              required
+              value={formik.values.name}
+              onChange={formik.handleChange}
             />
             <Input
               placeholder="Email"
               name="email"
-              value={form.email}
-              onChange={handleChange}
+              required
+              value={formik.values.email}
+              onChange={formik.handleChange}
             />
             <TextArea
               placeholder="Write your message"
               name="message"
-              value={form.message}
+              required
+              value={formik.values.message}
               rows={10}
-              onChange={handleChange}
+              onChange={formik.handleChange}
             />
             <Button type="submit">Send</Button>
           </Form>
