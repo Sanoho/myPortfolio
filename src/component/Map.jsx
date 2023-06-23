@@ -32,7 +32,7 @@ const Map = () => {
       projectionConfig={{
         scale: 1000,
       }}
-      style={{ width: "100%", height: "100%" }}
+      style={{ width: "80%", height: "100%" }}
     >
       <ZoomableGroup center={[-94.346, 36.9828]}>
         <Geographies geography={geoUrl}>

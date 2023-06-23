@@ -18,7 +18,7 @@ export default function Model(props) {
         geometry={nodes.Object_4.geometry}
         material={materials.Character_Texture}
         position={[0, 0.869, -0.072]}
-        scale={0.531}
+        // scale={0.531}
       />
     </group>
   );

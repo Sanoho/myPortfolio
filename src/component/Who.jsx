@@ -21,11 +21,12 @@ const Container = styled.div`
   height: 100vh;
   justify-content: space-between;
   scroll-snap-align: center;
-  width: 1300px;
+  width: 100%;
   z-index: 1;
 
   @media only screen and (max-width: 768px) {
     scroll-snap-align: none;
+    margin-right: 8%;
   }
 `;
 
@@ -47,6 +48,8 @@ const Right = styled.div`
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+  margin-right: 10%;
+  left: 20%;
 
   @media only screen and (max-width: 768px) {
     align-items: center;
@@ -80,6 +83,10 @@ const Subtitle = styled.h2`
 const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+    margin: 0 5% 2%;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -89,22 +96,6 @@ const ButtonContainer = styled.div`
   justify-content: space-around;
   position: relative;
 `;
-
-// const Button = styled.button`
-//   background-color: transparent;
-//   border: solid #da4ea2;
-//   border-radius: 5px;
-//   color: white;
-//   cursor: pointer;
-//   font-weight: 500;
-//   padding: 10px;
-//   width: 120px;
-//   transition: 1s;
-
-//   &:hover {
-//     scale: 0.9;
-//   }
-// `;
 
 const Links = styled.a`
   background-color: transparent;

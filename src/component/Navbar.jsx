@@ -16,7 +16,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px 0px;
-  width: 1400px;
+  width: 90%;
   position: fixed;
 
   @media only screen and (max-width: 768px) {

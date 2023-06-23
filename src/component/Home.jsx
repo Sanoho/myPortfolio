@@ -24,11 +24,10 @@ const Container = styled.div`
   height: 100%;
   justify-content: space-between;
   scroll-snap-align: center;
-  width: 1300px;
+  width: 90%;
   z-index: 1;
 
   @media only screen and (max-width: 768px) {
-    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -98,7 +97,7 @@ const Button = styled.button`
 `;
 
 const Right = styled.div`
-  flex: 3;
+  flex: 2;
   position: relative;
 
   @media only screen and (max-width: 768px) {
