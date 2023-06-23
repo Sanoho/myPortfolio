@@ -26,7 +26,6 @@ const Container = styled.div`
 
   @media only screen and (max-width: 768px) {
     scroll-snap-align: none;
-    margin-right: 8%;
   }
 `;
 
